@@ -1,0 +1,111 @@
+site_name: cMAM
+site_url: https://docs.algodeveloper.com/cmam/
+site_description: cMAM Documentation
+repo_name: afhacker/cmam
+repo_url: https://github.com/afhacker/cMAM
+edit_uri: "https://github.com/afhacker/cMAM/edit/master/docs"
+
+nav:
+- Getting Started:
+    - 'Overview': 'index.md'
+    - 'Download': 'download.md'
+    - 'Installation': 'installation.md'
+    - 'License': 'license.md'
+    - 'Migration to 3.7': 'migration-to-3.7.md'
+- cTrader:
+    - 'Open API Configuration': 'ctrader\open-api-configuration.md'
+    - 'Accounts': 'ctrader\accounts.md' 
+- Mirroring:
+    - 'Introduction': 'mirroring\introduction.md'  
+    - 'cTrader to cTrader': 'mirroring\ctrader-to-ctrader.md'
+    - 'cTrader to MetaTrader 4/5': 'mirroring\ctrader-to-mt.md'  
+    - 'MetaTrader 4/5 to cTrader': 'mirroring\mt-to-ctrader.md'  
+    - 'Slave Settings': 'mirroring\slave-settings.md'      
+    - 'MetaTrader 4/5 EA(s)': 'mirroring\mt-eas.md'  
+- More:
+    - 'Logs': 'more\logs.md'  
+    - 'Theme': 'more\theme.md'
+    - 'Telegram Notification': 'more\telegram_notification.md'
+    - 'Migration': 'more\migration.md'
+    - 'FAQS': 'more\faqs.md'
+extra:
+  generator: false
+ 
+copyright: Copyright &copy; 2022 AlgoDeveloper. cMAM. All rights reserved.
+
+theme:
+    name: material
+    favicon: img/favicon.ico
+    logo: img/logo.png
+    include_search_page: false
+    search_index_only: true
+    language: en
+    features:
+        - navigation.instant
+        - navigation.top
+        - navigation.tracking
+    palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+    font:
+        text: Roboto
+        code: Roboto Mono
+    static_templates:
+    - 404.html
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+
+
+
+markdown_extensions:
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
